@@ -61,6 +61,12 @@ h2 {
     box-shadow: 0 2px 6px rgba(0, 115, 230, 0.2);
 }
 
+.derivative {
+    margin-top: 0.5rem;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
 footer {
     background-color: #00509e;
     color: white;
