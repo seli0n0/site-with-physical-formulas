@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Физические Формулы</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -27,23 +28,23 @@
         <section id="kinematics">
             <h2>Кинематика</h2>
 
-            <!-- Путь -->
-            <div class="formula" onclick="toggleDerivatives('kinematic1')">
+            <!-- Прямолинейное движение -->
+            <div class="formula" onclick="toggleDerivatives('kinematic_linear_motion')">
                 <math xmlns="http://www.w3.org/1998/Math/MathML">
-                    <mi>S</mi> <mo>=</mo> <mi>V</mi> <mo>&#x22C5;</mo> <mi>t</mi>
+                    <mi>S</mi> <mo>=</mo> <mi>V</mi><sub>0</sub> <mo>&#x22C5;</mo> <mi>t</mi> <mo>+</mo> <mfrac><mn>1</mn><mn>2</mn></mfrac> <mi>a</mi> <mo>&#x22C5;</mo> <msup><mi>t</mi><mn>2</mn></msup>
                 </math>
-                <div class="derivatives" id="kinematic1">
-                    <math><mi>V</mi> <mo>=</mo> <mfrac><mi>S</mi><mi>t</mi></mfrac></math>
-                    <math><mi>t</mi> <mo>=</mo> <mfrac><mi>S</mi><mi>V</mi></mfrac></math>
+                <div class="derivatives" id="kinematic_linear_motion">
+                    <math><mi>V</mi> <mo>=</mo> <mi>V</mi><sub>0</sub> <mo>+</mo> <mi>a</mi> <mo>&#x22C5;</mo> <mi>t</mi></math>
+                    <math><mi>a</mi> <mo>=</mo> <mfrac><mi>ΔV</mi><mi>t</mi></mfrac></math>
                 </div>
             </div>
 
             <!-- Ускорение -->
-            <div class="formula" onclick="toggleDerivatives('kinematic2')">
+            <div class="formula" onclick="toggleDerivatives('kinematic_acceleration')">
                 <math xmlns="http://www.w3.org/1998/Math/MathML">
                     <mi>a</mi> <mo>=</mo> <mfrac><mi>ΔV</mi><mi>Δt</mi></mfrac>
                 </math>
-                <div class="derivatives" id="kinematic2">
+                <div class="derivatives" id="kinematic_acceleration">
                     <math><mi>ΔV</mi> <mo>=</mo> <mi>a</mi> <mo>&#x22C5;</mo> <mi>Δt</mi></math>
                     <math><mi>Δt</mi> <mo>=</mo> <mfrac><mi>ΔV</mi><mi>a</mi></mfrac></math>
                 </div>
@@ -53,8 +54,6 @@
         <!-- Динамика -->
         <section id="dynamics">
             <h2>Динамика</h2>
-
-            <!-- Второй закон Ньютона -->
             <div class="formula" onclick="toggleDerivatives('dynamic1')">
                 <math xmlns="http://www.w3.org/1998/Math/MathML">
                     <mi>F</mi> <mo>=</mo> <mi>m</mi> <mo>&#x22C5;</mo> <mi>a</mi>
@@ -64,24 +63,11 @@
                     <math><mi>a</mi> <mo>=</mo> <mfrac><mi>F</mi><mi>m</mi></mfrac></math>
                 </div>
             </div>
-
-            <!-- Сила трения -->
-            <div class="formula" onclick="toggleDerivatives('dynamic2')">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-                    <mi>F</mi><sub>тр</sub> <mo>=</mo> <mi>μ</mi> <mo>&#x22C5;</mo> <mi>N</mi>
-                </math>
-                <div class="derivatives" id="dynamic2">
-                    <math><mi>μ</mi> <mo>=</mo> <mfrac><mi>F</mi><sub>тр</sub><mi>N</mi></mfrac></math>
-                    <math><mi>N</mi> <mo>=</mo> <mfrac><mi>F</mi><sub>тр</sub><mi>μ</mi></mfrac></math>
-                </div>
-            </div>
         </section>
 
         <!-- Электричество -->
         <section id="electricity">
             <h2>Электричество</h2>
-
-            <!-- Закон Ома -->
             <div class="formula" onclick="toggleDerivatives('electricity1')">
                 <math xmlns="http://www.w3.org/1998/Math/MathML">
                     <mi>I</mi> <mo>=</mo> <mfrac><mi>U</mi><mi>R</mi></mfrac>
@@ -91,61 +77,7 @@
                     <math><mi>R</mi> <mo>=</mo> <mfrac><mi>U</mi><mi>I</mi></mfrac></math>
                 </div>
             </div>
-
-            <!-- Мощность -->
-            <div class="formula" onclick="toggleDerivatives('electricity2')">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-                    <mi>P</mi> <mo>=</mo> <mi>I</mi> <mo>&#x22C5;</mo> <mi>U</mi>
-                </math>
-                <div class="derivatives" id="electricity2">
-                    <math><mi>I</mi> <mo>=</mo> <mfrac><mi>P</mi><mi>U</mi></mfrac></math>
-                    <math><mi>U</mi> <mo>=</mo> <mfrac><mi>P</mi><mi>I</mi></mfrac></math>
-                </div>
-            </div>
-        </section>
-
-        <!-- Термодинамика -->
-        <section id="thermodynamics">
-            <h2>Термодинамика</h2>
-
-            <!-- Уравнение состояния идеального газа -->
-            <div class="formula" onclick="toggleDerivatives('thermo1')">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-                    <mi>PV</mi> <mo>=</mo> <mi>n</mi> <mo>&#x22C5;</mo> <mi>R</mi> <mo>&#x22C5;</mo> <mi>T</mi>
-                </math>
-                <div class="derivatives" id="thermo1">
-                    <math><mi>P</mi> <mo>=</mo> <mfrac><mi>nRT</mi><mi>V</mi></mfrac></math>
-                    <math><mi>V</mi> <mo>=</mo> <mfrac><mi>nRT</mi><mi>P</mi></mfrac></math>
-                </div>
-            </div>
-
-            <!-- Закон Бойля-Мариотта -->
-            <div class="formula" onclick="toggleDerivatives('thermo2')">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-                    <mi>P</mi><sub>1</sub> <mi>V</mi><sub>1</sub> <mo>=</mo> <mi>P</mi><sub>2</sub> <mi>V</mi><sub>2</sub>
-                </math>
-            </div>
-        </section>
-
-        <!-- Оптика -->
-        <section id="optics">
-            <h2>Оптика</h2>
-
-            <!-- Закон преломления света -->
-            <div class="formula" onclick="toggleDerivatives('optics1')">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-                    <mfrac><mrow><mi>sin</mi><mo>&#xA0;</mo><mi>i</mi></mrow><mrow><mi>sin</mi><mo>&#xA0;</mo><mi>r</mi></mrow></mfrac> <mo>=</mo> <mfrac><mi>n</mi><sub>2</sub><mi>n</mi><sub>1</sub></mfrac>
-                </math>
-            </div>
-
-            <!-- Фокусное расстояние линзы -->
-            <div class="formula" onclick="toggleDerivatives('optics2')">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-                    <mfrac><mn>1</mn><mi>f</mi></mfrac> <mo>=</mo> <mfrac><mn>1</mn><mi>d</mi><sub>o</sub></mfrac> <mo>+</mo> <mfrac><mn>1</mn><mi>d</mi><sub>i</sub></mfrac>
-                </math>
-            </div>
         </section>
     </main>
 </body>
 </html>
-
