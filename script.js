@@ -1,4 +1,4 @@
-function toggleDerivatives(id) {
-    const element = document.getElementById(id);
-    element.style.display = (element.style.display === "none") ? "block" : "none";
+function toggleSection(sectionId) {
+    const content = document.getElementById(sectionId);
+    content.style.display = content.style.display === 'block' ? 'none' : 'block';
 }

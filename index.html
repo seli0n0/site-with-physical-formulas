@@ -11,73 +11,141 @@
 <body>
     <header>
         <h1>Физические Формулы</h1>
+        <p>Все важные физические формулы, собранные в одном месте.</p>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="#kinematics">Кинематика</a></li>
-            <li><a href="#dynamics">Динамика</a></li>
-            <li><a href="#electricity">Электричество</a></li>
-            <li><a href="#thermodynamics">Термодинамика</a></li>
-            <li><a href="#optics">Оптика</a></li>
-        </ul>
-    </nav>
 
     <main>
         <!-- Кинематика -->
         <section id="kinematics">
-            <h2>Кинематика</h2>
-
-            <!-- Прямолинейное движение -->
-            <div class="formula" onclick="toggleDerivatives('kinematic_linear_motion')">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-                    <mi>S</mi> <mo>=</mo> <mi>V</mi><sub>0</sub> <mo>&#x22C5;</mo> <mi>t</mi> <mo>+</mo> <mfrac><mn>1</mn><mn>2</mn></mfrac> <mi>a</mi> <mo>&#x22C5;</mo> <msup><mi>t</mi><mn>2</mn></msup>
-                </math>
-                <div class="derivatives" id="kinematic_linear_motion">
-                    <math><mi>V</mi> <mo>=</mo> <mi>V</mi><sub>0</sub> <mo>+</mo> <mi>a</mi> <mo>&#x22C5;</mo> <mi>t</mi></math>
-                    <math><mi>a</mi> <mo>=</mo> <mfrac><mi>ΔV</mi><mi>t</mi></mfrac></math>
+            <h2 onclick="toggleSection('kinematics-content')">Кинематика</h2>
+            <div id="kinematics-content" class="formula-section">
+                <div class="formula" onclick="toggleDerivatives('formula1')">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>S</mi> <mo>=</mo> <mi>V</mi><sub>0</sub> <mo>&#x22C5;</mo> <mi>t</mi> <mo>+</mo> <mfrac><mn>1</mn><mn>2</mn></mfrac> <mi>a</mi> <mo>&#x22C5;</mo> <msup><mi>t</mi><mn>2</mn></msup>
+                    </math>
                 </div>
-            </div>
-
-            <!-- Ускорение -->
-            <div class="formula" onclick="toggleDerivatives('kinematic_acceleration')">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-                    <mi>a</mi> <mo>=</mo> <mfrac><mi>ΔV</mi><mi>Δt</mi></mfrac>
-                </math>
-                <div class="derivatives" id="kinematic_acceleration">
-                    <math><mi>ΔV</mi> <mo>=</mo> <mi>a</mi> <mo>&#x22C5;</mo> <mi>Δt</mi></math>
-                    <math><mi>Δt</mi> <mo>=</mo> <mfrac><mi>ΔV</mi><mi>a</mi></mfrac></math>
+                <div class="formula" onclick="toggleDerivatives('formula2')">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>V</mi> <mo>=</mo> <mi>V</mi><sub>0</sub> <mo>+</mo> <mi>a</mi> <mo>&#x22C5;</mo> <mi>t</mi>
+                    </math>
+                </div>
+                <div class="formula" onclick="toggleDerivatives('formula3')">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>a</mi> <mo>=</mo> <mfrac><mi>ΔV</mi><mi>t</mi></mfrac>
+                    </math>
+                </div>
+                <div class="formula" onclick="toggleDerivatives('formula4')">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>S</mi> <mo>=</mo> <mfrac><mi>V</mi> <mo>&#x22C5;</mo> <mi>t</mi></mfrac>
+                    </math>
+                </div>
+                <div class="formula" onclick="toggleDerivatives('formula5')">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>S</mi> <mo>=</mo> <mfrac><mi>1</mi><mi>2</mi></mfrac> <mi>a</mi> <mo>&#x22C5;</mo> <msup><mi>t</mi><mn>2</mn></msup>
+                    </math>
                 </div>
             </div>
         </section>
 
         <!-- Динамика -->
         <section id="dynamics">
-            <h2>Динамика</h2>
-            <div class="formula" onclick="toggleDerivatives('dynamic1')">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-                    <mi>F</mi> <mo>=</mo> <mi>m</mi> <mo>&#x22C5;</mo> <mi>a</mi>
-                </math>
-                <div class="derivatives" id="dynamic1">
-                    <math><mi>m</mi> <mo>=</mo> <mfrac><mi>F</mi><mi>a</mi></mfrac></math>
-                    <math><mi>a</mi> <mo>=</mo> <mfrac><mi>F</mi><mi>m</mi></mfrac></math>
+            <h2 onclick="toggleSection('dynamics-content')">Динамика</h2>
+            <div id="dynamics-content" class="formula-section">
+                <div class="formula" onclick="toggleDerivatives('formula6')">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>F</mi> <mo>=</mo> <mi>m</mi> <mo>&#x22C5;</mo> <mi>a</mi>
+                    </math>
+                </div>
+                <div class="formula" onclick="toggleDerivatives('formula7')">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>P</mi> <mo>=</mo> <mi>m</mi> <mo>&#x22C5;</mo> <mi>g</mi>
+                    </math>
+                </div>
+                <div class="formula" onclick="toggleDerivatives('formula8')">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>F</mi><sub>тр</sub> <mo>=</mo> <mi>μ</mi> <mo>&#x22C5;</mo> <mi>N</mi>
+                    </math>
+                </div>
+                <div class="formula" onclick="toggleDerivatives('formula9')">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>p</mi> <mo>=</mo> <mi>m</mi> <mo>&#x22C5;</mo> <mi>v</mi>
+                    </math>
+                </div>
+                <div class="formula" onclick="toggleDerivatives('formula10')">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>F</mi><sub>с</sub> <mo>=</mo> <mfrac><mi>m</mi><msup><mi>v</mi><mn>2</mn></msup></mfrac> <mo>&#x2215;</mo> <mi>R</mi>
+                    </math>
                 </div>
             </div>
         </section>
 
         <!-- Электричество -->
         <section id="electricity">
-            <h2>Электричество</h2>
-            <div class="formula" onclick="toggleDerivatives('electricity1')">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-                    <mi>I</mi> <mo>=</mo> <mfrac><mi>U</mi><mi>R</mi></mfrac>
-                </math>
-                <div class="derivatives" id="electricity1">
-                    <math><mi>U</mi> <mo>=</mo> <mi>I</mi> <mo>&#x22C5;</mo> <mi>R</mi></math>
-                    <math><mi>R</mi> <mo>=</mo> <mfrac><mi>U</mi><mi>I</mi></mfrac></math>
+            <h2 onclick="toggleSection('electricity-content')">Электричество</h2>
+            <div id="electricity-content" class="formula-section">
+                <div class="formula" onclick="toggleDerivatives('formula11')">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>V</mi> <mo>=</mo> <mfrac><mi>W</mi><mi>q</mi></mfrac>
+                    </math>
+                </div>
+                <div class="formula" onclick="toggleDerivatives('formula12')">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>I</mi> <mo>=</mo> <mfrac><mi>U</mi><mi>R</mi></mfrac>
+                    </math>
+                </div>
+                <div class="formula" onclick="toggleDerivatives('formula13')">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>P</mi> <mo>=</mo> <mi>U</mi> <mo>&#x22C5;</mo> <mi>I</mi>
+                    </math>
+                </div>
+                <div class="formula" onclick="toggleDerivatives('formula14')">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>Q</mi> <mo>=</mo> <mi>c</mi> <mo>&#x22C5;</mo> <mi>U</mi>
+                    </math>
+                </div>
+                <div class="formula" onclick="toggleDerivatives('formula15')">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>W</mi> <mo>=</mo> <mi>U</mi> <mo>&#x22C5;</mo> <mi>q</mi>
+                    </math>
+                </div>
+            </div>
+        </section>
+
+        <!-- Термодинамика -->
+        <section id="thermodynamics">
+            <h2 onclick="toggleSection('thermodynamics-content')">Термодинамика</h2>
+            <div id="thermodynamics-content" class="formula-section">
+                <div class="formula" onclick="toggleDerivatives('formula16')">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>Q</mi> <mo>=</mo> <mi>m</mi> <mo>&#x22C5;</mo> <mi>c</mi> <mo>&#x22C5;</mo> <mi>ΔT</mi>
+                    </math>
+                </div>
+                <div class="formula" onclick="toggleDerivatives('formula17')">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>A</mi> <mo>=</mo> <mi>p</mi> <mo>&#x22C5;</mo> <mi>ΔV</mi>
+                    </math>
+                </div>
+                <div class="formula" onclick="toggleDerivatives('formula18')">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>U</mi> <mo>=</mo> <mi>W</mi> <mo>+</mo> <mi>Q</mi>
+                    </math>
+                </div>
+                <div class="formula" onclick="toggleDerivatives('formula19')">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>p</mi> <mi>V</mi> <mo>=</mo> <mi>n</mi> <mi>R</mi> <mi>T</mi>
+                    </math>
+                </div>
+                <div class="formula" onclick="toggleDerivatives('formula20')">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>η</mi> <mo>=</mo> <mfrac><mi>A</mi><mi>Q</mi></mfrac>
+                    </math>
                 </div>
             </div>
         </section>
     </main>
+
+    <footer>
+        <p>&copy; 2024 Физические Формулы</p>
+    </footer>
 </body>
 </html>
