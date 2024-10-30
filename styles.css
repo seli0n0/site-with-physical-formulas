@@ -1,38 +1,70 @@
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #f0f8ff; /* Светло-голубой фон */
+    color: #003366; /* Темно-синий текст */
 }
 
 header {
-    background-color: #4CAF50;
-    color: #fff;
+    background-color: #0073e6; /* Насыщенный синий фон */
+    color: white;
     padding: 1.5rem;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0.2em 0;
+}
+
+header p {
+    font-size: 1.1em;
+    margin: 0;
 }
 
 main {
     margin: 2rem auto;
     width: 90%;
     max-width: 800px;
-    background: #fff;
+    background: #ffffff;
     padding: 2rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 115, 230, 0.15);
 }
 
 h2 {
+    font-size: 1.5em;
+    color: #00509e; /* Темно-синий для подзаголовков */
     cursor: pointer;
-    color: #4CAF50;
+    border-bottom: 2px solid #00509e;
+    padding-bottom: 0.2em;
+    margin-bottom: 0.5em;
 }
 
 .formula-section {
     display: none;
     padding: 1rem 0;
-    border-bottom: 1px solid #ccc;
 }
 
 .formula {
+    background-color: #e6f2ff; /* Светло-голубой для карточек формул */
     margin: 1rem 0;
+    padding: 0.8rem;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+}
+
+.formula:hover {
+    transform: scale(1.02);
+    box-shadow: 0 2px 6px rgba(0, 115, 230, 0.2);
+}
+
+footer {
+    background-color: #00509e;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
 }
