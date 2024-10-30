@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Формулы по физике</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Формулы по физике</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#kinematics">Кинематика</a></li>
+            <li><a href="#dynamics">Динамика</a></li>
+            <li><a href="#electricity">Электричество</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="kinematics">
+            <h2>Кинематика</h2>
+            <div class="formula" onclick="toggleDerivatives('kinematic1')">
+                S = V * t
+                <div class="derivatives" id="kinematic1">
+                    <p>V = S / t</p>
+                    <p>t = S / V</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="dynamics">
+            <h2>Динамика</h2>
+            <div class="formula" onclick="toggleDerivatives('dynamic1')">
+                F = m * a
+                <div class="derivatives" id="dynamic1">
+                    <p>m = F / a</p>
+                    <p>a = F / m</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="electricity">
+            <h2>Электричество</h2>
+            <div class="formula" onclick="toggleDerivatives('electricity1')">
+                I = U / R
+                <div class="derivatives" id="electricity1">
+                    <p>U = I * R</p>
+                    <p>R = U / I</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Формулы по физике. Все права защищены.</p>
+    </footer>
+</body>
+</html>
+
