@@ -1,71 +1,31 @@
-/* Стилизация сайта */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: #f5f5f5;
 }
-
-header {
-    background-color: #007bff;
-    color: white;
+header, nav, main {
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+h1, h2 {
     text-align: center;
-    padding: 20px 0;
 }
-
-nav ul {
+ul {
+    list-style: none;
+    padding: 0;
     display: flex;
-    justify-content: center;
-    list-style-type: none;
-    padding: 10px;
-    background-color: #0056b3;
+    justify-content: space-around;
 }
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-main {
-    padding: 20px;
-}
-
-section {
-    margin-bottom: 30px;
-}
-
 .formula {
+    padding: 0.5rem;
     background-color: #ffffff;
-    border: 1px solid #007bff;
-    padding: 15px;
-    border-radius: 5px;
+    border: 1px solid #cccccc;
+    margin-bottom: 0.5rem;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
-
-.formula:hover {
-    background-color: #e7f1ff;
-}
-
 .derivatives {
     display: none;
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #f0f8ff;
-    border-left: 4px solid #007bff;
-}
-
-footer {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding-left: 1rem;
 }
